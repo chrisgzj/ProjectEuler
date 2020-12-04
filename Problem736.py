@@ -1,3 +1,5 @@
+from datetime import datetime
+
 # Problem 736
 # https://projecteuler.net/problem=736
 
@@ -26,9 +28,14 @@ def main():
     def lattice_s(x,y):
         return 2 * x, y + 1
 
-    a, b, counter = find_smallest_odd_path(lattice_r, lattice_s, 45, 90, 35)
-
-    print(a,b,counter)
+    for limit in range(20, 100): # Greedy approach to increasing limit.
+        print(f"Searching for limit {limit}:")
+        print(datetime.now())
+        a, b, counter = find_smallest_odd_path(lattice_r, lattice_s, 45, 90, limit)
+        if counter <= limit:
+            print(a,b,counter)
+        else:
+            print("Not found")
 
 main()
 
