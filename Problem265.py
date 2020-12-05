@@ -9,4 +9,18 @@
 # 00011101 2 = 29
 # Calling S(N) the sum of the unique numeric representations, we can see that S(3) = 23 + 29 = 52.
 # Find S(5).
+from datetime import datetime
+combinations = []
+def all_combinations(n, current_string = ''):
+    """Generates recursively all possible combinations of digits 1 and 0 with length N"""
+    global combinations
+    if n == 0:
+        combinations.append(current_string)
+        return
+    all_combinations(n - 1, current_string + '0')
+    all_combinations(n - 1, current_string + '1')
 
+print(datetime.now())
+all_combinations(32)
+print(len(combinations))
+print(datetime.now())
