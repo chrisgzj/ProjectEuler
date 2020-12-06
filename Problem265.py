@@ -1,7 +1,7 @@
 # Problem 265
 # https://projecteuler.net/problem=265
 # Difficulty rating: 40%
-# Status: Solved inefficiently (takes aprox. 5 minutes to run).
+# Status: Inefficient solution (takes aprox. 5 minutes to run, should be less than one).
 
 # Description of the problem:
 # 2N binary digits can be placed in a circle so that all the N-digit clockwise subsequences are distinct.
@@ -114,6 +114,4 @@ main()
 # 65536 candidates checking modular
 # 32768 solutions without basic rotations
 
-# 5 minutes to run all_candidates, 1 minute to run the rest.
-# Final solution: 209110240768
 
